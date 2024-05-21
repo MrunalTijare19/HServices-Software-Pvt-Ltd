@@ -1,0 +1,114 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HServices Software Pvt Ltd</title>
+    <link rel="shortcut icon" type="image/png" href={% static "admin/assets/images/logos/favicon.png" %} />
+    <link rel="stylesheet" href={% static "admin/assets/css/styles.min.css" %} />
+    <link rel="stylesheet" href={% static "website/css/owl.carousel.min.css" %}>
+    <link rel="stylesheet" href={% static "website/css/owl.theme.default.min.css" %}>
+    <link rel="stylesheet" href={% static "website/css/owl.theme.default.min.css" %}>
+
+    <link rel="stylesheet" href={% static "website/css/jquery.fancybox.min.css" %}>
+</head>
+
+<body>
+  <!--  Body Wrapper -->
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar">
+      <!-- Sidebar scroll-->
+      <div>
+        <div class="brand-logo d-flex align-items-center justify-content-between">
+          <a href="{% url "home" %}" class="text-nowrap logo-img">
+            <img src={% static "website\images\HServices.png" %} width="200" alt="HServices" />
+          </a>
+          <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+            <i class="ti ti-x fs-8"></i>
+          </div>
+        </div>
+        
+      </div>
+      <!-- End Sidebar scroll-->
+    </aside>
+    <!--  Sidebar End -->
+    <!--  Main wrapper -->
+    <div class="body-wrapper">
+      <!--  Header Start -->
+      <header class="app-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <ul class="navbar-nav">
+            <li class="nav-item d-block d-xl-none">
+              <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse" href="javascript:void(0)">
+                <i class="ti ti-menu-2"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-icon-hover" href="javascript:void(0)">
+                <i class="ti ti-bell-ringing"></i>
+                <div class="notification bg-primary rounded-circle"></div>
+              </a>
+            </li>
+          </ul>
+          
+        </nav>
+      </header>
+      <!--  Header End -->
+      <div class="container-fluid">
+
+        {% block admin %}
+        
+        {% endblock admin %}
+        <hr>  
+        
+        <div class="py-6 px-6 text-center">
+          <p class="mb-0 fs-4">Design and Developed by <a href="#">Mrunal Tijare</a> Distributed by <a href="#">Mrunal</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src={% static "admin/assets/libs/jquery/dist/jquery.min.js" %}></script>
+  <script src={% static "admin/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js" %}></script>
+  <script src={% static "admin/assets/js/sidebarmenu.js" %}></script>
+  <script src={% static "admin/assets/js/app.min.js" %}></script>
+  <script src={% static "admin/assets/libs/apexcharts/dist/apexcharts.min.js" %}></script>
+  <script src={% static "admin/assets/libs/simplebar/dist/simplebar.js" %}></script>
+  <script src={% static "admin/assets/js/dashboard.js" %}></script>
+
+  <script src={% static "website/js/jquery-ui.js" %}></script>
+  <script src={% static "website/js/popper.min.js" %}></script>
+  <script src={% static "website/js/bootstrap.min.js" %}></script>
+  <script src={% static "website/js/owl.carousel.min.js" %}></script>
+  <script src={% static "website/js/jquery.easing.1.3.js" %}></script>
+  <script src={% static "website/js/aos.js" %}></script>
+  <script src={% static "website/js/jquery.fancybox.min.js" %}></script>
+  <script src={% static "website/js/jquery.sticky.js" %}></script>
+  <script src={% static "website/js/isotope.pkgd.min.js" %}></script>
+
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:true,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:3
+          },
+          1000:{
+              items:4
+          }
+      }
+  })
+  </script>
+
+</body>
+
+</html>
